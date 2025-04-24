@@ -22,9 +22,9 @@ import { MiniMailer } from 'minimailer';
 const mailer = new MiniMailer();
 
 const response = await mailer.send(
-  'someone@example.com',
-  'Test Email',
-  'Hello! This is a test email.',
+  'someone@example.com', //email to
+  'Test Email', //subject
+  'Hello! This is a test email.', ///body
   'https://example.com/file.pdf' // Optional
 );
 
@@ -33,7 +33,7 @@ console.log(response);
 ```
 # .env
 ```bash
-EMAIL_FROM=your.email@gmail.com
+EMAIL_FROM=youremail@gmail.com
 EMAIL_PASSWORD="abcd abcd cbcd abcd"
 
 ```
