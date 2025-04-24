@@ -1,15 +1,39 @@
-# simple-mail
+# minimailer
 
-To install dependencies:
+A simple, lightweight Node.js/Bun module for sending emails with optional attachments.
+
+## ✨ Features
+
+- Send plain text or html emails
+- Add attachments via URL
+- Lightweight and easy to use
+- Works with Gmail
+
+## 🚀 Installation
 
 ```bash
-bun install
+npm install minimailer
 ```
-
-To run:
+# usage
 
 ```bash
-bun run index.ts
-```
+import { MiniMailer } from 'minimailer';
 
-This project was created using `bun init` in bun v1.1.29. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+const mailer = new MiniMailer();
+
+const response = await mailer.send(
+  'someone@example.com',
+  'Test Email',
+  'Hello! This is a test email.',
+  'https://example.com/file.pdf' // Optional
+);
+
+console.log(response);
+
+```
+# .env
+```bash
+EMAIL_FROM=your.email@gmail.com
+EMAIL_PASSWORD="abcd abcd cbcd abcd"
+
+```

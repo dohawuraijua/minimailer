@@ -1,7 +1,20 @@
 {
-  "name": "simple-mail",
+  "name": "minimailer",
   "module": "index.ts",
   "type": "module",
+  "version": "1.0.2",
+  "description": "A simple mail sender",
+  "keywords": [
+    "email",
+    "sendmail",
+    "node",
+    "bun"
+  ],
+  "author": "Andre Lamma",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umvxcode/simple-mail"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
