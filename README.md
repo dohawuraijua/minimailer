@@ -14,6 +14,7 @@ A simple, lightweight Node.js/Bun module for sending emails with optional attach
 ```bash
 npm install minimailer
 ```
+
 # usage
 
 ```bash
@@ -31,9 +32,20 @@ const response = await mailer.send(
 console.log(response);
 
 ```
+
 # .env
+
 ```bash
+EMAIL_HOST="" //default 'smtp.gmail.com'
+EMAIL_PORT= //default 587
 EMAIL_FROM=youremail@gmail.com
 EMAIL_PASSWORD="abcd abcd cbcd abcd"
 
+
 ```
+
+## ☕ Support Me on Sociabuzz
+
+If you find my work helpful, consider supporting me on Sociabuzz 🙏
+
+[![Support Me on Sociabuzz](https://img.shields.io/badge/Support%20Me%20on-Sociabuzz-red?style=for-the-badge)](https://sociabuzz.com/dohawuraijua)

@@ -21,14 +21,16 @@ export class MiniMailer {
     let text = body;
     let user_from = process.env.EMAIL_FROM ?? null
     let pass_from = process.env.EMAIL_PASSWORD ?? null
+    let mail_host = process.env.EMAIL_HOST ?? 'smtp.gmail.com'
+    let mail_port = process.env.EMAIL_PORT ?? 587
 
     if (!user_from || !pass_from) {
       return createResponse(400, 'Missing required env attribute with key: EMAIL_FROM and EMAIL_PASSWORD', {});
     }
 
     let transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 587,
+      host: mail_host,
+      port: mail_port,
       secure: false,
       auth: {
         user: user_from,
